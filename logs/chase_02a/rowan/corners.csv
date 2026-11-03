@@ -1,0 +1,3 @@
+t,dir,angle,radius_m,v_entry_kmh,v_min_kmh,v_exit_kmh,brake_dist_before_apex_m,peak_brake,peak_brakeG,trail_brake_s,throttle_on_after_apex_m,peak_latG,lat_pos_at_apex,elev_change_m
+15.9,L,39,302,104,104,142,,0.0,0.0,0.0,0.0,0.68,0.33,-4.2
+30.0,L,143,24,144,11,11,134.0,0.62,0.83,4.27,,1.93,1.35,-3.1
