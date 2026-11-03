@@ -1,0 +1,38 @@
+{
+  "driveLogger_toggle": {
+    "cat": "vehicle_specific",
+    "order": 1,
+    "ctx": "vlua",
+    "isBasic": true,
+    "onDown": "if not driveLogger then extensions.load('driveLogger') end driveLogger.toggle()",
+    "title": "driveLogger: start / stop recording",
+    "desc": "Toggles the driveLogger telemetry recorder on the current vehicle"
+  },
+  "driveLogger_aiSmartFlee": {
+    "cat": "vehicle_specific",
+    "order": 2,
+    "ctx": "vlua",
+    "isBasic": true,
+    "onDown": "if not driveLogger then extensions.load('driveLogger') end driveLogger.aiTest('smart')",
+    "title": "driveLogger: AI test - smart flee + log (this car)",
+    "desc": "Makes the current car a fleeing smartAI Moonhawk and logs it. Press again in that car to stop."
+  },
+  "driveLogger_aiStockFlee": {
+    "cat": "vehicle_specific",
+    "order": 3,
+    "ctx": "vlua",
+    "isBasic": true,
+    "onDown": "if not driveLogger then extensions.load('driveLogger') end driveLogger.aiTest('stock')",
+    "title": "driveLogger: AI test - stock flee + log (this car)",
+    "desc": "Makes the current car a fleeing stock AI and logs it, for comparison. Press again in that car to stop."
+  },
+  "driveLogger_haltAll": {
+    "cat": "vehicle_specific",
+    "order": 4,
+    "ctx": "tlua",
+    "isBasic": true,
+    "onDown": "for _, v in ipairs(getAllVehicles()) do v:queueLuaCommand('if driveLogger then driveLogger.halt() end') end ui_message('driveLogger: stopped all loggers and AI', 4, 'driveLogger')",
+    "title": "driveLogger: STOP ALL (every car: logger off, AI stops)",
+    "desc": "Stops logging on every vehicle and brings any AI-driven vehicle to a stop"
+  }
+}
